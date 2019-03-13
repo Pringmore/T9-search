@@ -8,10 +8,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <section>
+    <section class="head-section">
         <div class="container">
             <header>
-                <h1>#T9 Telefonbuch</h1>
+                <div class="presentation">
+                    <h1 class="page-header">#T9 Telefonbuch</h1>
+                    <i class="toggle-button" onclick="toggleNotice()">i</i>
+                </div>
+                <div id="info" class="hidden">
+                    <h3 class="notice">Notice: Tape some numbers into to search field in order to look for names who match with the mobile keypad touch</h3>
+                    <p class="notice">
+                    Press button "Search" to start looking for results<br>
+                        Press button "Reset" to reset the field's value</p>
+                </div>
                 <div class="form-container">
                      <form action="index.php"
                         id="form"
@@ -27,17 +36,29 @@
                                 class="submit-button">Search</button>
                     </form>
                 </div>
-                   
+                <div class="table-container">
+                    <table class="table-users">
+                        <thead class="table-head">
+                            <tr>
+                                <th>Vornachmen</th>
+                                <th>Nachnamen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mohamed</td>
+                                <td>Salah</td>
+                            </tr>
+                            <tr>
+                                <td>Samual</td>
+                                <td>Eto</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>   
             </header>
         </div>
     </section>
-    <section>
-        <div class="container">
-            <table>
-                <thead></thead>
-                <tbody></tbody>
-            </table>
-        </div>
-    </section>
+    <script src="js/animation.js"></script>
 </body>
 </html>
