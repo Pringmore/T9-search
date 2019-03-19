@@ -38,7 +38,8 @@ class Database
         $password = "654321";
         $bdname = "t9_search";
 
-        try {   
+        try 
+            {   
                 // Connect to the database
                 $this->_conn = new PDO("mysql:host=$servername;dbname=$bdname", $username, $password);
                 // To be sure the statement and the values are parsed after sending them to the MySQL server
@@ -64,7 +65,8 @@ class Database
     protected function run($sql, $regExp) 
     {
         // If we do not have a connection then establish it!
-        if (!$this->_conn) {
+        if (!$this->_conn) 
+        {
             $this->connect();
         }
         
