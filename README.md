@@ -1,5 +1,5 @@
 
 # T9-Search experiment     
-In this coding simple you will find a simulation for a T9 search field based on OOPHP and MySQL
+In this coding project you will find a simulation for a T9 search field based on LEMP x OOPHP 
 
-More Documentation about the content will be added in the next versions
+More Documentation about the content will be provided in the next version

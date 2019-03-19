@@ -1,0 +1,29 @@
+{
+  "name": "t9_search",
+  "version": "1.0.0",
+  "description": "T9 search simulator",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run start-conts && npm run install-pdo && npm run create-table && npm run restart-conts",
+    "start-conts": "sudo docker-compose up -d",
+    "install-pdo": "sudo docker exec LEMP_php docker-php-ext-install pdo pdo_mysql",
+    "create-table": "sudo docker exec -i LEMP_mariaDB mysql -uroot -p654321 t9_search < dump.sql",
+    "restart-conts": "sudo docker-compose restart"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pringmore"
+  },
+  "keywords": [
+    "LEMP",
+    "PhpOO",
+    "Nginx",
+    "MySQL",
+    "MySql",
+    "MariaDB",
+    "T9",
+    "Search"
+  ],
+  "author": "Pringmore",
+  "license": "ISC"
+}
