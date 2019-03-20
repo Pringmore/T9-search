@@ -4,7 +4,7 @@ In this coding project you will find a simulation for a T9 search field based on
 
 ### To start Application: 
 ``npm run start``
-### for stop Application:
+### To stop Application:
 ``npm run down``
 
 ![Application](https://github.com/Pringmore/T9-search/blob/T00/code/assets/img/localhost.png)
