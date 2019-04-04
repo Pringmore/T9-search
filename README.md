@@ -6,6 +6,8 @@ In this coding project you will find a simulation for a T9 search field based on
 ``npm run start``
 ### To stop Application:
 ``npm run down``
+### To start Tests:
+``npm run rest``
 
 ![Application](https://github.com/Pringmore/T9-search/blob/T00/code/assets/img/localhost.png)
 
