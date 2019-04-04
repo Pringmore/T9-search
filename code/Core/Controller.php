@@ -34,7 +34,7 @@ class Controller
 	public $_error_input = false;
 
 	public function __construct()  
-    {  
+  {  
 		$this->model = new Model();
 	} 
 
@@ -47,10 +47,12 @@ class Controller
 	 */
 	public function cleanInput($data)
 	{ 
-		if (preg_match('/^[2-9]+$/', $data)) {
+		if (preg_match('/^[2-9]+$/', $data))
+		{
 			$this->_error_input = false;
 			return true;
-		} else {
+		}else 
+		{
 			$this->_error_input = true;
 			return false;
 		}

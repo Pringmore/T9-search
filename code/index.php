@@ -7,9 +7,11 @@
     if (!isset($_GET['act']))
     {   // Route to the home page w/o search results
         $controller->index(); 
-    }else {
+    }else 
+    {
         
-        switch ($_GET['act']) {
+        switch ($_GET['act']) 
+        {
             case 'search':
                 if(isset($_POST['number-input']) && $controller->cleanInput($_POST['number-input']))
                 // Route to the home page w search results
@@ -20,7 +22,7 @@
                 break;
             
             default:
-                // Route to the home page w search results
+                // Route to the home page w/o search results
                 $controller->index();
                 break;
         }   
