@@ -10,53 +10,22 @@ include_once ('Core/Database.php');
 class Model extends Database
 {   
     /**
-	 * Generate dynamically a regular expression.
+	 * Generate dynamically a search expression.
 	 *
 	 * @access public
 	 * @param  string    $data  The input that the user entered into the search field
-	 * @return string    $regExp is the dynamically generated regular exp. used to search for entities
+	 * @return string    $Exp is the dynamically generated exp. used to search for entities
 	 */
-    public function generateRegExp($data) 
+    public function generateExp($data) 
     {   
         /**
-         * The regular expression that we will use to match between input and DB entities.
+         * The expression that we will use to match between input and DB entities starting with $data value.
          *
          * @var    string
          */
-        $regExp = "^";
-        
-        $array = str_split($data);
-        foreach ( $array as $character )
-        {
-            switch ($character) {
-                case '2':
-                    $regExp = $regExp ."(A|B|C|a|b|c)";
-                    break;
-                case '3':
-                    $regExp = $regExp ."(D|E|F|d|e|f)";
-                    break;
-                case '4':
-                    $regExp = $regExp ."(G|H|I|g|h|i)";
-                    break;
-                case '5':
-                    $regExp = $regExp ."(J|K|L|j|k|l)";
-                    break;
-                case '6':
-                    $regExp = $regExp ."(M|N|O|m|n|o)";
-                    break;
-                case '7':
-                    $regExp = $regExp ."(P|Q|R|S|p|q|r|s)";   
-                    break;
-                case '8':
-                    $regExp = $regExp ."(T|U|V|t|u|v)";
-                    break;
-                case '9':
-                    $regExp = $regExp ."(W|X|Y|Z|w|x|y|z)";
-                    break; 
-            }
-        }
-        
-        return $regExp;
+        $Exp = $data . "%";
+                
+        return $Exp;
     }
 
     /**
@@ -69,9 +38,9 @@ class Model extends Database
 	 */ 
     public function prepare($input) 
     {   
-        $sql = "SELECT vorname, nachname From Contacts WHERE vorname REGEXP :regExpOne OR nachname REGEXP :regExpTwo";
-        $regExp = $this->generateRegExp($input);
-        $result = $this->run($sql, $regExp);
+        $sql = "SELECT vorname, nachname From Contacts WHERE VornameWert LIKE :ExpOne OR NachnameWert LIKE :ExpTwo";
+        $Exp = $this->generateExp($input);
+        $result = $this->run($sql, $Exp);
        
         return $this->_stmt;
     }

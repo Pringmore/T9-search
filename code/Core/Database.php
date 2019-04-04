@@ -62,7 +62,7 @@ class Database
 	 * @param  string    $reset Whether we should reset the model data.
 	 * @return boolean
 	 */
-    protected function run($sql, $regExp) 
+    protected function run($sql, $Exp) 
     {
         // If we do not have a connection then establish it!
         if (!$this->_conn) 
@@ -72,8 +72,8 @@ class Database
         
         // If connection is establish then we should: prepare + execute + return data        
         $this->_stmt = $this->_conn->prepare($sql);        
-        $this->_stmt->bindParam(':regExpOne', $regExp);
-        $this->_stmt->bindParam(':regExpTwo', $regExp);
+        $this->_stmt->bindParam(':ExpOne', $Exp);
+        $this->_stmt->bindParam(':ExpTwo', $Exp);
         
         $result = $this->_stmt->execute();        
             
