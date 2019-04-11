@@ -6,7 +6,9 @@ use PHPUnit\Framework\TestCase;
 final class ModelTest extends TestCase
 {   
     public function testIfConfigurationIsWorking(){
-        $this->assertEquals('Model','odel');
+        $this->markTestIncomplete(
+            'This test has not been implemented yet.'
+        );
     }
 }
 ?>

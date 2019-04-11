@@ -6,7 +6,9 @@ use PHPUnit\Framework\TestCase;
 final class RoutingTest extends TestCase
 {   
     public function testIfConfigurationIsWorking(){
-        $this->assertEquals('Routing','outing');
+        $this->markTestIncomplete(
+            'This test has not been implemented yet.'
+        );
     }
 }
 ?>
