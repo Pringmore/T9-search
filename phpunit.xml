@@ -11,10 +11,10 @@
          convertWarningsToExceptions="true"
          forceCoversAnnotation="false"
          printerClass="PHPUnit\TextUI\ResultPrinter"
-         processIsolation="false"
-         stopOnError="false"
+         processIsolation="false"   
+         stopOnError="false"                        
          stopOnFailure="false"
-         stopOnIncomplete="false"
+         stopOnIncomplete="false"                                                                  
          stopOnSkipped="false"
          stopOnRisky="false"
          testSuiteLoaderClass="PHPUnit\Runner\StandardTestSuiteLoader"
@@ -23,8 +23,20 @@
          timeoutForLargeTests="60"
          verbose="false">
         <testsuites>
-            <testsuite name="First Test Suite">
+            <testsuite name="Configuration Test Suite">
                 <file>tests/first/test001.php</file>
+            </testsuite>
+            <testsuite name="Data Format Test Suite">
+                <file>tests/first/test002.php</file>
+            </testsuite>
+            <testsuite name="Model Test Suite">
+                <file>tests/first/test003.php</file>
+            </testsuite>
+            <testsuite name="Routing Test Suite">
+                <file>tests/first/test004.php</file>
+            </testsuite>
+            <testsuite name="View Test Suite">
+                <file>tests/first/test005.php</file>
             </testsuite>
         </testsuites>
 </phpunit>
