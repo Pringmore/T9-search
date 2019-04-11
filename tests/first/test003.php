@@ -3,10 +3,10 @@ declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
 
-final class ConfigurationTest extends TestCase
+final class ModelTest extends TestCase
 {   
     public function testIfConfigurationIsWorking(){
-        $this->assertEquals('Config','config');
+        $this->assertEquals('Model','odel');
     }
 }
 ?>
