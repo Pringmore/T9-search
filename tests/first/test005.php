@@ -6,7 +6,9 @@ use PHPUnit\Framework\TestCase;
 final class ViewTest extends TestCase
 {   
     public function testIfConfigurationIsWorking(){
-        $this->assertEquals('View','iew');
+        $this->markTestIncomplete(
+            'This test has not been implemented yet.'
+        );
     }
 }
 ?>

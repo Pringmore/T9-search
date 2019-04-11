@@ -6,7 +6,9 @@ use PHPUnit\Framework\TestCase;
 final class DataFormatTest extends TestCase
 {   
     public function testIfConfigurationIsWorking(){
-        $this->assertEquals('Datafomat','ataformat');
+        $this->markTestIncomplete(
+            'This test has not been implemented yet.'
+        );
     }
 }
 ?>
