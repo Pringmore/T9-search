@@ -4,12 +4,14 @@
   "description": "T9 search simulator",
   "main": "index.js",
   "scripts": {
-    "init": "npm run start && npm run install-pdo && npm run create-table && npm run restart-conts",
+    "init": "npm run start && npm run init-tests && npm run install-pdo && npm run create-table && npm run restart-conts",
     "start": "npm run start-conts",
     "start-conts": "sudo docker-compose up -d",
     "install-pdo": "sudo docker exec LEMP_php docker-php-ext-install pdo pdo_mysql",
     "create-table": "sudo docker exec -i LEMP_mariaDB mysql -uroot -p654321 t9_search < dump.sql",
     "restart-conts": "sudo docker-compose restart",
+    "init-tests": "sudo composer install",
+    "test": "sudo vendor/bin/phpunit",
     "down": "sudo docker-compose down -v"
   },
   "repository": {
