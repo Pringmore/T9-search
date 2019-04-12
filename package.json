@@ -10,7 +10,8 @@
     "install-pdo": "sudo docker exec LEMP_php docker-php-ext-install pdo pdo_mysql",
     "create-table": "sudo docker exec -i LEMP_mariaDB mysql -uroot -p654321 t9_search < dump.sql",
     "restart-conts": "sudo docker-compose restart",
-    "init-tests": "sudo composer install",
+    "init-tests": "npm run install-dbunit && sudo composer install",
+    "install-dbunit": "sudo composer require --dev phpunit/dbunit",
     "test": "sudo vendor/bin/phpunit",
     "down": "sudo docker-compose down -v"
   },
