@@ -39,4 +39,10 @@
                 <file>tests/first/test005.php</file>
             </testsuite>
         </testsuites>
+        <php>
+        <var name="DB_DSN" value="mysql:dbname=t9_search;host=127.0.0.1" />
+        <var name="DB_USER" value="root" />
+        <var name="DB_PASSWD" value="654321" />
+        <var name="DB_DBNAME" value="t9_search" />
+    </php>
 </phpunit>

@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<dataset>
+    <table name="Contacts">
+        <column>id</column>
+        <column>Vorname</column>
+        <column>Nachname</column>
+        <column>Number</column>
+        <column>VornameWert</column>
+        <column>NachnameWert</column>
+        <row>
+            <value>0</value>
+            <value>Otto</value>
+            <value>Moritz</value>
+            <value>532412210</value>
+            <value>6886</value>
+            <value>667489</value>
+        </row>
+        <row>
+            <value>1</value>
+            <value>Marie</value>
+            <value>Moritz</value>
+            <value>1244689632</value>
+            <value>62743</value>
+            <value>667489</value>
+        </row>
+        <row>
+            <value>2</value>
+            <value>Rahman</value>
+            <value>Ali</value>
+            <value>153129895</value>
+            <value>724626</value>
+            <value>254</value>
+        </row> 
+        <row>
+            <value>3</value>
+            <value>Hana</value>
+            <value>Fischer</value>
+            <value>13232547</value>
+            <value>4262</value>
+            <value>3472437</value>
+        </row>
+    </table>
+</dataset>

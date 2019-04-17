@@ -5,7 +5,7 @@ use PHPUnit\Framework\TestCase;
 
 final class ModelTest extends TestCase
 {   
-    public function testIfConfigurationIsWorking(){
+    public function testIfModelLogicIsWorking(){
         $this->markTestIncomplete(
             'This test has not been implemented yet.'
         );
