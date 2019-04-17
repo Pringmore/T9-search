@@ -5,7 +5,7 @@ use PHPUnit\Framework\TestCase;
 
 final class DataFormatTest extends TestCase
 {   
-    public function testIfConfigurationIsWorking(){
+    public function testIfOutputedDataFormatLogicIsWorking(){
         $this->markTestIncomplete(
             'This test has not been implemented yet.'
         );
